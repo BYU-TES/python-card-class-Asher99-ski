@@ -38,4 +38,12 @@ if card1.get_rank() == ranks[11]:
 if card1.get_value() == 10:
     print("Passed value test")
 
-print(card3)#This should print the card from the __str__ method
+print(card3) #This should print the card from the __str__ method
+
+deck = []
+for s in suits:
+    for r in ranks:
+        deck.append(Card(s,r)) #create a new card from the suit and rank
+
+for c in deck:
+    print(c) #c is a card in the deck, each time this loop repeats then it will call the __str__ method from the card class
